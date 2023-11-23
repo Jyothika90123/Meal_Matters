@@ -105,13 +105,16 @@
                     >Contact</label
                   >&nbsp &nbsp
                   <input
-                    type="text"
-                    name="Ph_no"
-                    class="form-control-sm textarea"
-                    id="exampleInputText1"
-                    placeholder="Enter contact number"
-                    size="50px"
-                  />
+      type="text"
+      name="Ph_no"
+      class="form-control-sm textarea"
+      id="exampleInputText1"
+      placeholder="Enter 10-digit contact number"
+      size="50px"
+      pattern="[0-9]{10}"
+      title="Please enter a 10-digit phone number"
+      required
+    >
                 </div>
 
                 <div class="mb-3">
