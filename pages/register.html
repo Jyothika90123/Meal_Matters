@@ -1,74 +1,333 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="login.css">
-</head>
-<body>
-    <div>
+<DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Register</title>
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous"
+      />
+      <link rel="stylesheet" type="text/css" href="login.css" />
+      <style>
+        .hidden {
+          display: none;
+        }
+      </style>
+    </head>
+    <body>
+      <div>
         <div class="container-fluid registerpage">
-            <div class="register align-items-center">
-                
-                <div class="registerform">
-                    <form>
-                        <div class="top">
-                            <p class="heading">Sign Up</p>
-                            <select class="form-select form-control-sm" aria-label="Default select example">
-                                <option selected>Select type</option>
-                                <option value="1">Donor</option>
-                                <option value="2">Charity organization</option>
-                                <option value="3">Volunteer</option>
-                              </select>
-                        </div>
-                        <br/>
-                        <div class="mb-3">
-                            <label for="exampleInputName1" class="form-label text-form">Your Name</label>
-                            <input type="text" name="name" class="form-control-sm textarea" id="profilename" aria-describedby="emailHelp" placeholder="Enter your name" size="50px">
-                          </div>
+          <div class="register align-items-center">
+            <div id="registerform">
+              <form>
+                <div class="top">
+                  <p class="heading">Sign Up</p>
+                  <h5>Select an option</h5>
+                <label>
+                  <input
+                    type="radio"
+                    name="option"
+                    value="option1"
+                    onclick="showBox('option1')"
+                  />
+                  Donor
+                </label>
+                <br />
+                <label>
+                  <input
+                    type="radio"
+                    name="option"
+                    value="option2"
+                    onclick="showBox('option2')"
+                  />
+                  Volunteer
+                </label>
+                <br />
+                <label>
+                  <input
+                    type="radio"
+                    name="option"
+                    value="option3"
+                    onclick="showBox('option3')"
+                  />
+                  Charity Organisation
+                </label>
 
-                        <div class="mb-3">
-                          <label for="exampleInputName1" class="form-label text-form">Username</label>
-                          <input type="text" name="username" class="form-control-sm textarea" id="exampleInputName1" aria-describedby="emailHelp" placeholder="Enter your username" size="50px">
-                        </div>
-
-                        <div class="mb-3">
-                          <label for="exampleInputPassword1" class="form-label text-form">Password</label>&nbsp
-                          <input type="password" name="password" class="form-control-sm textarea" id="exampleInputPassword1" placeholder="Enter password" size="50px">
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label text-form">Email Id</label>&nbsp &nbsp
-                            <input type="email" name="email" class="form-control-sm textarea" id="exampleInputEmail1" placeholder="Enter your email" size="50px">
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="exampleInputText1" class="form-label text-form">Contact</label>&nbsp &nbsp
-                            <input type="text" name="Contact" class="form-control-sm textarea" id="exampleInputText1" placeholder="Enter contact number" size="50px">
-                        </div>  
-
-                        <div class="mb-3">
-                            <label for="exampleInputText2" class="form-label text-form">Address</label>
-                            <input type="text" name="Address" form-control" id="exampleInputText2" placeholder="Enter your address" size="50px">
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="exampleInputText3" class="form-label text-form">Pin No</label>&nbsp &nbsp &nbsp
-                            <input type="text" name="pin" class="form-control-sm textarea" id="exampleInputText3" placeholder="Enter pin no" size="50px">
-                        </div>
-                    
-                        <div class="d-grid gap-2"> 
-                        <button type="submit" class="btn btn-primary loginbtn textarea">Register</button>
-                        </div>
-                        <p class="newuser">Already registered? <a href="login.html">Log In</a></p>
-                      </form>
+                <div class="mb-3">
+                  <label for="profilename" class="form-label text-form"
+                    >Your Name</label
+                  >
+                  <input
+                    type="text"
+                    name="Name"
+                    class="form-control-sm textarea"
+                    id="profilename"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter your name"
+                    size="50px"
+                  />
                 </div>
-            </div>
-        </div>
-    </div>
+                <div class="mb-3">
+                  <label for="email1" class="form-label text-form"
+                    >Email Id</label
+                  >&nbsp &nbsp
+                  <input
+                    type="email"
+                    name="Email"
+                    class="form-control-sm textarea"
+                    id="email1"
+                    placeholder="Enter your email"
+                    size="50px"
+                  />
+                </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
-</html>
+                <div class="mb-3">
+                  <label
+                    for="password1"
+                    class="form-label text-form"
+                    >Password</label
+                  >&nbsp
+                  <input
+                    type="password"
+                    name="Password"
+                    class="form-control-sm textarea"
+                    id="password1"
+                    placeholder="Enter password"
+                    size="50px"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="exampleInputText1" class="form-label text-form"
+                    >Contact</label
+                  >&nbsp &nbsp
+                  <input
+                  type="text"
+                  name="Ph_no"
+                  class="form-control-sm textarea"
+                  id="exampleInputText1"
+                  placeholder="Enter 10-digit contact number"
+                  pattern="\d{10}"
+                  title="Please enter a 10-digit phone number"
+                  required
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="exampleInputText2" class="form-label text-form"
+                    >Address</label
+                  >
+                  <input
+                    type="text"
+                    name="Address"
+                    class="form-control-sm textarea"
+                    id="exampleInputText2"
+                    placeholder="Enter your address"
+                    size="50px"
+                  />
+                </div>
+
+                <div id="detailsoption1" class="hidden mb-3">
+                  <label for="usertype" class="form-label text-form"
+                    >Restaurant or Individual</label
+                  >
+                  <input
+                    type="text"
+                    name="RI"
+                    class="form-control-sm textarea"
+                    id="exampleusertype"
+                    placeholder="Restaurant or Individual"
+                    size="50px"
+                  />
+                </div>
+
+                <div id="detailsoption2" class="hidden">
+                  <div class="mb-3">
+                    <label for="dateofbirth" class="form-label text-form"
+                      >Date of Birth</label
+                    >
+                    <input
+                      type="date"
+                      name="DoB"
+                      class="form-control-sm textarea"
+                      id="dateofbirth"
+                      placeholder="dd-mm-yyyy"
+                      size="50px"
+                    />
+                    <br />
+                  </div>
+                  <div class="mb-3">
+                    <label for="area" class="form-label text-form">Area</label>
+                    <input
+                      type="text"
+                      name="Area_avail"
+                      class="form-control-sm textarea"
+                      id="examplearea"
+                      placeholder="Preferred area"
+                      size="50px"
+                    />
+                    <br />
+                  </div>
+
+                  <label for="time" class="form-label text-form"
+                    >Time Available</label
+                  >
+                  <div class="mb-3">
+                    <label for="availabletimefrom" class="form-label text-form"
+                      >From</label
+                    >
+                    <input
+                      type="time"
+                      name="From"
+                      class="form-control-sm textarea"
+                      id="exampletimefrom"
+                      placeholder="Starting time"
+                      size="50px"
+                    />
+                    <br />
+                  </div>
+                  <div class="mb-3">
+                    <label for="availabletimeto" class="form-label text-form"
+                      >To</label
+                    >
+                    <input
+                      type="time"
+                      name="To"
+                      class="form-control-sm textarea"
+                      id="exampletimeto"
+                      placeholder="Ending time"
+                      size="50px"
+                    />
+                  </div>
+                </div>
+
+                <div id="detailsoption3" class="hidden">
+                  <!--<h3>Details for Option 3:</h3>-->
+                  <!-- Include form fields for Option 3 -->
+                  <!--<label
+                    >Preference: <input type="text" name="preferenceOption3"
+                  /></label>-->
+                </div>
+              </div>
+              <br />
+                <div class="d-grid gap-2">
+                  <button type="submit" class="btn btn-primary loginbtn textarea">
+                    Register
+                  </button>
+                </div>
+                <p class="newuser">
+                  Already registered? <a href="login.html">Log In</a>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"
+      ></script>
+    </body>
+  
+  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  <script>
+      const { createClient } = supabase
+      supabase = createClient('https://jdpmvcqvpoettcqrwwcp.supabase.co','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpkcG12Y3F2cG9ldHRjcXJ3d2NwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA0MDM1NzEsImV4cCI6MjAxNTk3OTU3MX0.DEVGEK7cU38SsU9fgbP85ERlSLJuPO7gdt_8zcWzsxM')
+  
+      function showBox(option) {
+        // Hide all details divs
+        document.getElementById("detailsoption1").classList.add("hidden");
+        document.getElementById("detailsoption2").classList.add("hidden");
+        document.getElementById("detailsoption3").classList.add("hidden");
+
+        // Show details div based on the selected option
+        document.getElementById("details" + option).classList.remove("hidden");
+
+        if (option == "option1") {
+          let containerDiv = document.querySelector(".register");
+          containerDiv.style.height = "140vh";
+        }
+
+        if (option == "option2") {
+          let containerDiv = document.querySelector(".register");
+          containerDiv.style.height = "180vh";
+        }
+
+        if (option == "option3") {
+          let containerDiv = document.querySelector(".register");
+          containerDiv.style.height = "130vh";
+        }
+     }
+
+      const form = document.getElementById('registerform');
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        // Creating a user to authenticate
+        const { data, error } = await supabase.auth.signUp({
+  email: document.getElementById('email1').value,
+  password: document.getElementById('password1').value,
+})
+    
+        console.log(data)
+        if (error) {
+          alert(error)
+        } else {
+            console.log("no error till signup")
+        
+    
+        const formInputs = form.querySelectorAll('input, textarea, select');
+    
+        let dataObject = {};
+        formInputs.forEach(element => {
+        const { value, name } = element;
+          if (value) {
+              if (name !== '' && name!="option")
+                  dataObject[name] = value;
+              }
+        });
+        
+        console.log(dataObject)
+        const selectedoption = document.querySelector(
+      'input[name="option"]:checked'
+        ).value;
+        if ( selectedoption == 'option1')
+        {
+            
+            const { error, data } = await supabase.from('Donor').insert([dataObject]);
+            if (error) {
+                console.log("Error inserting data into 'Donor' table:", error);
+            } else {
+                console.log("Data inserted into 'Donor' table:", data);
+            }
+        }
+        if ( selectedoption == 'option2')
+        {
+            const { error, data } = await supabase.from('Volunteers').insert([dataObject]);
+            if (error) {
+                console.log("Error inserting data into 'Volunteer' table:", error);
+            } else {
+                console.log("Data inserted into 'Volunteer' table:", data);
+            }
+        } 
+        if (selectedoption == 'option3')
+        {
+            const { error, data } = await supabase.from('Charity_Organisation').insert([dataObject]);
+            if (error) {
+                console.log("Error inserting data into 'Charity' table:", error);
+            } else {
+                console.log("Data inserted into 'Charity' table:", data);
+            } 
+        }
+        window.location.href = 'login.html';
+      }
+        });
+  </script>
+  
+  </html>
+  
+  
